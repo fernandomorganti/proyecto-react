@@ -14,13 +14,13 @@
 .carrito {
   align-items: end;
   width: 200px;
-  padding-left: 100px;
+  padding-left: 200px;
   padding-top: 20px;
 }
 .menu {
   align-content: center;
   width: 700px;
-  padding-left: 50px;
+  padding-left: 120px;
 }
 .productos {
   width: 100%;
