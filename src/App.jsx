@@ -1,9 +1,15 @@
-import Footer from "./Footer.jsx"
-function App() {
+import Navbar from "./components/layout/navbar/Navbar.jsx";
+import ItemsListContainer from "./components/pages/itemsListContainer/ItemsListContainer.jsx";
+import Footer from "./components/layout/footer/Footer.jsx";
 
+function App() {
   return (
-    <h1>Este es mi proyecto</h1>
-  )
+    <div className="contenedor">
+      <Navbar />
+      <ItemsListContainer />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
