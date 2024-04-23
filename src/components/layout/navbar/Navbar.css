@@ -1,0 +1,42 @@
+.menu {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(26, 68, 102);
+  align-items: center;
+  padding: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.categorias a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(26, 68, 102);
+  padding: 10px 20px;
+  color: white;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+  border-color: white;
+  border: 2px solid white;
+  margin: 20px;
+}
+
+.categorias a:hover {
+  background-color: rgb(206, 206, 198);
+  color: rgb(26, 68, 102);
+}

@@ -1,0 +1,23 @@
+.col-md-4.offset-md-4 {
+  width: 350px;
+  margin: 10px;
+  border: 2px solid rgb(74, 45, 148);
+  border-radius: 30px;
+  text-align: center;
+}
+
+.item-detail {
+  justify-content: center;
+  align-items: center;
+}
+
+.item-detail .img-fluid {
+  height: 250px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 300px;
+  height: auto;
+}

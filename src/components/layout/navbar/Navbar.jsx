@@ -1,32 +1,28 @@
-import { Box, Button } from "@mui/material";
-import CartWidget from "../cart/CartWidget";
+import CartWidget from "../../pages/cart/cartWidget/CartWidget.jsx";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <Box className="contenedor-Navbar">
-      <div>
-        <h1>Panes</h1>
-        <img
-          src="https://www.bimbo.com.ar/sites/all/themes/custom/bimbo/img/mainlogo.png"
-          alt="Logo"
-        />
-      </div>
-      <div className="menu">
-        <Button variant="contained" sx={{ margin: "20px" }}>
-          Artesano
-        </Button>
-        <Button variant="contained" sx={{ margin: "20px" }}>
-          Panes
-        </Button>
-        <Button variant="contained" sx={{ margin: "20px" }}>
-          Dulces
-        </Button>
-        <Button variant="contained" sx={{ margin: "20px" }}>
-          Rapiditas
-        </Button>
-      </div>
-      <CartWidget />
-    </Box>
+    <div>
+      <>
+        <div className="menu">
+          <Link to="/">
+            <img
+              src="https://www.bimbo.com.ar/sites/all/themes/custom/bimbo/img/mainlogo.png"
+              alt="Logo"
+            />
+          </Link>
+          <ul className="categorias">
+            <Link to="/">PANES</Link>
+            <Link to="/category/salado">SALADOS</Link>
+            <Link to="/category/dulce">DULCES</Link>
+            <Link to="/category/rapiditas">RAPIDITAS</Link>
+          </ul>
+          <CartWidget />
+        </div>
+      </>
+    </div>
   );
 };
 
