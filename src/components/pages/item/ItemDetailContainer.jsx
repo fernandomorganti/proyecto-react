@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  console.log(id);
 
   const [item, setItem] = useState({});
 
@@ -18,9 +17,12 @@ const ItemDetailContainer = () => {
     getProduct.then((res) => setItem(res));
   }, [id]);
 
-  console.log(item);
+  const onAdd = (cantidad) => {
+    let objetoCompleto = { ...item, quantity: cantidad };
+    console.log(objetoCompleto);
+  };
 
-  return <ItemDetail item={item} />;
+  return <ItemDetail item={item} onAdd={onAdd} />;
 };
 
 export default ItemDetailContainer;

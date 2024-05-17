@@ -1,10 +1,17 @@
 import CounterPresentacional from "./CounterPresentacional";
+import { useState } from "react";
 
-const CounterContainer = () => {
-  const [contador, setContador] = useState(1);
+const CounterContainer = ({ stock, initial = 1, onAdd }) => {
+  const [contador, setContador] = useState(initial);
+
   const sumar = () => {
-    setContador(contador + 1);
+    if (contador < stock) {
+      setContador(contador + 1);
+    } else {
+      alert("maximo en stock");
+    }
   };
+
   const restar = () => {
     if (contador > 1) {
       setContador(contador - 1);
@@ -12,9 +19,15 @@ const CounterContainer = () => {
       alert("no podes menos de 1");
     }
   };
-  return (
-    <CounterPresentacional sumar={sumar} restar={restar} contador={contador} />
-  );
+
+  let objectProps = {
+    restar,
+    sumar,
+    contador,
+    onAdd,
+  };
+
+  return <CounterPresentacional {...objectProps} />;
 };
 
 export default CounterContainer;
